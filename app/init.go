@@ -15,6 +15,7 @@ func (w *Window) Init() {
 	w.scene.Add(w.cam)
 	camera.NewOrbitControl(w.cam)
 
+	// might want to add this later
 	// Set up callback to update viewport and camera aspect ratio when the window is resized
 	// want to make this its own function
 	//onResize := func(evName string, ev interface{}) {
@@ -33,6 +34,7 @@ func (w *Window) Init() {
 		w.scene.Add(helper.NewAxes(0.5))
 	}
 
-	// add the ground to the scene
+	// add stuff
 	Ground(w)
+	AddLight(w)
 }

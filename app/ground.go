@@ -7,27 +7,22 @@ import (
 	"github.com/g3n/engine/math32"
 )
 
-const rad90 float32 = 90 * (math32.Pi / 180)
+func Deg2Rad(d float32) float32 {
+	return d * (math32.Pi / 180)
+}
 
 func Ground(w *Window) {
 
-	p := geometry.NewPlane(1, 1)
+	p := geometry.NewPlane(100, 100)
 
-	// color not working currently
-	gMat := material.NewStandard(&math32.Color{
-		R: 7,
-		G: 14,
-		B: 48,
-	})
+	gMat := material.NewStandard(&math32.Color{})
 	gMat.SetWireframe(false)
 	gMat.SetSide(material.SideDouble)
 
 	g := graphic.NewMesh(p, gMat)
 
-	// this func takes in the angle in radians
-	// 90* in radians is not normal num, so we'll convert
-	g.RotateX(rad90)
-
+	// makes it flat
+	g.RotateX(Deg2Rad(90))
 	w.Add2Scene(g)
 
 }
