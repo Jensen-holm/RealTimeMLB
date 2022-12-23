@@ -16,7 +16,7 @@ func LoadAll(gs ...*core.Node) ([]*core.Node, error) {
 
 func DPath() string {
 	d, _ := os.Getwd()
-	return d + "/data/"
+	return d + "/models/"
 }
 
 func ReadObj(objPath, mtlPath string) (*core.Node, error) {

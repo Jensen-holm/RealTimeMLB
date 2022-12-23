@@ -15,33 +15,41 @@ import (
 // adds everything to the scene as well
 func (w *Window) Init() {
 
+	w.AddCam()
+	w.AddHelp()
+	w.AddBg()
+	w.AddGround()
+	w.AddLight(100, 100, 100, "white")
+	w.AddLight(-100, 100, -100, "white")
+	// init the physics simulation
+	bsbl.Init(w.scene)
+
 	gui.Manager().Set(w.scene)
-	w.cam.SetPosition(0, 0, 2)
-	w.scene.Add(w.cam)
-	camera.NewOrbitControl(w.cam)
 
-	w.app.Gls().ClearColor(.5, .75, 2, .5)
-
-	if w.help {
-		w.scene.Add(helper.NewAxes(0.5))
-	}
-
-	// add stuff
-	//Ground(w)
-
-	AddLight(w, 100, 100, 100, "white")
-	AddLight(w, -100, 100, -100, "white")
-
-	err := AddObjs(w)
+	err := w.AddObjs()
 	if err != nil {
 		log.Fatalf("error loading obj files: %v", err)
 	}
 
-	bsbl.Init(w.scene)
-
 }
 
-func AddObjs(w *Window) error {
+func (w *Window) AddHelp() {
+	if w.help {
+		w.Add2Scene(helper.NewAxes(10))
+	}
+}
+
+func (w *Window) AddBg() {
+	w.app.Gls().ClearColor(.5, .75, 2, .5)
+}
+
+func (w *Window) AddCam() {
+	w.cam.SetPosition(0, 0, 2)
+	w.scene.Add(w.cam)
+	camera.NewOrbitControl(w.cam)
+}
+
+func (w *Window) AddObjs() error {
 
 	gs, err := obj.LoadAll(
 		obj.Soccer(),

@@ -5,8 +5,7 @@ import (
 	"github.com/g3n/engine/math32"
 )
 
-func AddLight(
-	w *Window,
+func (w *Window) AddLight(
 	posX,
 	posY,
 	posZ float32,

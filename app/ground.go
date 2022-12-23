@@ -11,9 +11,9 @@ func Deg2Rad(d float32) float32 {
 	return d * (math32.Pi / 180)
 }
 
-func Ground(w *Window) {
+func (w *Window) AddGround() {
 
-	p := geometry.NewPlane(500, 500)
+	p := geometry.NewPlane(5000, 5000)
 
 	gMat := material.NewStandard(
 		math32.NewColor("mediumspringgreen"),
