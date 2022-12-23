@@ -12,6 +12,8 @@ import (
 	"time"
 )
 
+// Window -> This struct and files associated
+// with it serve as a wrapper for g3n app stuff
 type Window struct {
 	app   *app.Application
 	scene *core.Node
