@@ -16,6 +16,7 @@ type Window struct {
 	app   *app.Application
 	scene *core.Node
 	cam   *camera.Camera
+	help  bool
 }
 
 func NewWindow() *Window {
@@ -23,6 +24,13 @@ func NewWindow() *Window {
 		app:   app.App(),
 		scene: core.NewNode(),
 		cam:   camera.New(1),
+		help:  true,
+	}
+}
+
+func (w *Window) ToggleHelp(h bool) {
+	if h != w.help {
+		w.help = h
 	}
 }
 
@@ -36,6 +44,7 @@ func (w *Window) SetUP() {
 	camera.NewOrbitControl(w.cam)
 
 	// Set up callback to update viewport and camera aspect ratio when the window is resized
+	// want to make this its own function
 	onResize := func(evName string, ev interface{}) {
 		// Get framebuffer size and update viewport accordingly
 		width, height := w.app.GetSize()
@@ -46,8 +55,11 @@ func (w *Window) SetUP() {
 	w.app.Subscribe(window.OnWindowSize, onResize)
 	onResize("", nil)
 
-	w.scene.Add(helper.NewAxes(0.5))
 	w.app.Gls().ClearColor(0.5, 0.5, 0.5, 1.0)
+
+	if w.help {
+		w.scene.Add(helper.NewAxes(0.5))
+	}
 }
 
 func (w *Window) RunApp() error {

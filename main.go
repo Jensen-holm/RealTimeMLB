@@ -9,6 +9,8 @@ func main() {
 
 	w := app.NewWindow()
 
+	w.ToggleHelp(false)
+
 	w.SetUP()
 
 	err := w.RunApp()
