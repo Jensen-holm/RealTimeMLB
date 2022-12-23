@@ -1,7 +1,6 @@
 package win
 
 import (
-	"github.com/Jensen-holm/RealTimeMLB/rend"
 	"github.com/g3n/engine/app"
 	"github.com/g3n/engine/camera"
 	"github.com/g3n/engine/core"
@@ -80,7 +79,8 @@ func (w *Window) Init() {
 		w.scene.Add(helper.NewAxes(0.5))
 	}
 
-	rend.Ground(w)
+	// add the ground to the scene
+	Ground(w)
 }
 
 func (w *Window) RunApp() error {

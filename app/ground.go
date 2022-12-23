@@ -1,14 +1,13 @@
-package rend
+package win
 
 import (
-	"github.com/Jensen-holm/RealTimeMLB/win"
 	"github.com/g3n/engine/geometry"
 	"github.com/g3n/engine/graphic"
 	"github.com/g3n/engine/material"
 	"github.com/g3n/engine/math32"
 )
 
-func Ground(w *win.Window) {
+func Ground(w *Window) {
 
 	p := geometry.NewPlane(.5, 1)
 	gMat := material.NewStandard(&math32.Color{
