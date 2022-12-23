@@ -1,17 +1,17 @@
 package main
 
 import (
-	"github.com/Jensen-holm/RealTimeMLB/app"
 	"log"
 )
 
 func main() {
 
-	w := app.NewWindow()
+	w := win.NewWindow()
 
 	//w.ToggleHelp(false)
 
-	w.SetUP()
+	// Must be called right before RunApp
+	w.Init()
 
 	err := w.RunApp()
 	if err != nil {

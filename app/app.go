@@ -1,6 +1,7 @@
-package app
+package win
 
 import (
+	"github.com/Jensen-holm/RealTimeMLB/rend"
 	"github.com/g3n/engine/app"
 	"github.com/g3n/engine/camera"
 	"github.com/g3n/engine/core"
@@ -30,15 +31,31 @@ func NewWindow() *Window {
 	}
 }
 
+func (w *Window) App() *app.Application {
+	return w.app
+}
+
+func (w *Window) Scene() *core.Node {
+	return w.scene
+}
+
+func (w *Window) Cam() *camera.Camera {
+	return w.cam
+}
+
+func (w *Window) Add2Scene(node core.INode) {
+	w.scene.Add(node)
+}
+
 func (w *Window) ToggleHelp(h bool) {
 	if h != w.help {
 		w.help = h
 	}
 }
 
-// SetUP -> Necessary boilerplate to create
+// Init -> Necessary boilerplate to create
 // a g3n application before running it
-func (w *Window) SetUP() {
+func (w *Window) Init() {
 
 	gui.Manager().Set(w.scene)
 	w.cam.SetPosition(0, 0, 2)
@@ -62,6 +79,8 @@ func (w *Window) SetUP() {
 	if w.help {
 		w.scene.Add(helper.NewAxes(0.5))
 	}
+
+	rend.Ground(w)
 }
 
 func (w *Window) RunApp() error {
