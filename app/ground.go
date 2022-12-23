@@ -15,9 +15,10 @@ func Ground(w *Window) {
 
 	p := geometry.NewPlane(500, 500)
 
-	gMat := material.NewStandard(math32.NewColor(
-		"mediumspringgreen",
-	))
+	gMat := material.NewStandard(
+		math32.NewColor("mediumspringgreen"),
+	)
+
 	gMat.SetWireframe(false)
 	gMat.SetSide(material.SideDouble)
 

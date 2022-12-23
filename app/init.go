@@ -1,9 +1,11 @@
 package win
 
 import (
+	"github.com/Jensen-holm/RealTimeMLB/obj"
 	"github.com/g3n/engine/camera"
 	"github.com/g3n/engine/gui"
 	"github.com/g3n/engine/util/helper"
+	"log"
 )
 
 // Init -> Necessary boilerplate to create
@@ -37,4 +39,11 @@ func (w *Window) Init() {
 	// add stuff
 	Ground(w)
 	AddLight(w)
+
+	g, err := obj.TestObj()
+	if err != nil {
+		log.Fatalf("error loading test object")
+	}
+
+	w.Add2Scene(g)
 }

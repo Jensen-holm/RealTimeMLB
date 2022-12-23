@@ -7,7 +7,10 @@ import (
 
 func AddLight(w *Window) {
 	// Adds directional front light
-	dir1 := light.NewDirectional(&math32.Color{R: 1, G: 1, B: 1}, 0.6)
-	dir1.SetPosition(100, 100, 100)
-	w.Add2Scene(dir1)
+	l1 := light.NewDirectional(
+		math32.NewColor("white"),
+		0.6,
+	)
+	l1.SetPosition(100, 100, 100)
+	w.Add2Scene(l1)
 }

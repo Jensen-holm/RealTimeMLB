@@ -8,8 +8,6 @@ import (
 func main() {
 
 	w := win.NewWindow()
-
-	// Must be called right before RunApp
 	w.Init()
 
 	err := w.RunApp()
