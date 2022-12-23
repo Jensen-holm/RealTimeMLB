@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"github.com/Jensen-holm/RealTimeMLB/bsbl"
 	"github.com/Jensen-holm/RealTimeMLB/models"
+	"github.com/Jensen-holm/RealTimeMLB/models/ball"
 	"github.com/Jensen-holm/RealTimeMLB/models/stadium"
 	"github.com/g3n/engine/camera"
 	"github.com/g3n/engine/gui"
@@ -23,6 +24,11 @@ func (w *Window) Init() {
 	w.AddLight(100, 100, 100, "white")
 	w.AddLight(-100, 100, -100, "white")
 	w.AddShaders()
+
+	// add the baseball
+	b := ball.NewBall()
+	w.Add2Scene(b)
+
 	// init the physics simulation
 	bsbl.Init(w.scene)
 
