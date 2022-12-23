@@ -1,6 +1,7 @@
 package win
 
 import (
+	"fmt"
 	"github.com/Jensen-holm/RealTimeMLB/obj"
 	"github.com/g3n/engine/camera"
 	"github.com/g3n/engine/gui"
@@ -40,10 +41,22 @@ func (w *Window) Init() {
 	Ground(w)
 	AddLight(w)
 
-	g, err := obj.TestObj()
+	err := AddObjs(w)
 	if err != nil {
-		log.Fatalf("error loading test object")
+		log.Fatalf("error loading obj files: %v", err)
 	}
 
-	w.Add2Scene(g)
+}
+
+func AddObjs(w *Window) error {
+
+	gs, err := obj.LoadAll()
+	if err != nil {
+		return fmt.Errorf("error loading test object")
+	}
+
+	for _, g := range gs {
+		w.Add2Scene(g)
+	}
+	return nil
 }

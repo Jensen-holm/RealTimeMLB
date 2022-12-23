@@ -6,6 +6,18 @@ import (
 	"os"
 )
 
+func LoadAll() ([]*core.Node, error) {
+	groups := make([]*core.Node, 0)
+
+	g, err := TestObj()
+	if err != nil {
+		return nil, err
+	}
+
+	groups = append(groups, g)
+	return groups, nil
+}
+
 func DPath() string {
 	d, _ := os.Getwd()
 	return d + "/data/"
