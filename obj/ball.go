@@ -1,8 +1,5 @@
 package obj
 
-import "github.com/g3n/engine/core"
-
-func Ball() *core.Node {
-	g, _ := ReadObj("baseball.obj", "baseball.mtl")
-	return g
-}
+// Create a new baseball to get flown thorough the air
+// maybe instead of creating a new one each time we change
+// the position of the ball after each play
