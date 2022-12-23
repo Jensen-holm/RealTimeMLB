@@ -3,7 +3,8 @@ package win
 import (
 	"fmt"
 	"github.com/Jensen-holm/RealTimeMLB/bsbl"
-	"github.com/Jensen-holm/RealTimeMLB/obj"
+	"github.com/Jensen-holm/RealTimeMLB/models"
+	"github.com/Jensen-holm/RealTimeMLB/models/stadium"
 	"github.com/g3n/engine/camera"
 	"github.com/g3n/engine/gui"
 	"github.com/g3n/engine/util/helper"
@@ -52,8 +53,8 @@ func (w *Window) AddCam() {
 
 func (w *Window) AddObjs() error {
 
-	gs, err := obj.LoadAll(
-		obj.Soccer(),
+	gs, err := models.LoadAll(
+		stadium.Soccer(),
 	)
 
 	if err != nil {

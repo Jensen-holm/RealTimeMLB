@@ -1,4 +1,4 @@
-package obj
+package ball
 
 // Create a new baseball to get flown thorough the air
 // maybe instead of creating a new one each time we change

@@ -1,4 +1,4 @@
-package obj
+package models
 
 import (
 	"github.com/g3n/engine/core"
