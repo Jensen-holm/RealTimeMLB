@@ -9,7 +9,7 @@ func main() {
 
 	w := app.NewWindow()
 
-	w.ToggleHelp(false)
+	//w.ToggleHelp(false)
 
 	w.SetUP()
 
