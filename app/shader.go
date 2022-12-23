@@ -5,7 +5,7 @@ I got this code
 from a demo in g3n repo
 */
 
-func Shader(w *Window) {
+func (w *Window) AddShaders() {
 
 	// Create custom shader
 	w.app.Renderer().AddShader("shaderBricksVertex", shaderBricksVertex)

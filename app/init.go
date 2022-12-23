@@ -21,6 +21,7 @@ func (w *Window) Init() {
 	w.AddGround()
 	w.AddLight(100, 100, 100, "white")
 	w.AddLight(-100, 100, -100, "white")
+	w.AddShaders()
 	// init the physics simulation
 	bsbl.Init(w.scene)
 
