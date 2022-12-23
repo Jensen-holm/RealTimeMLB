@@ -8,6 +8,7 @@ import (
 func main() {
 
 	w := win.NewWindow()
+	w.ToggleHelp(true)
 	w.Init()
 
 	err := w.RunApp()

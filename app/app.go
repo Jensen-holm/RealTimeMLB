@@ -20,7 +20,7 @@ func NewWindow() *Window {
 		app:   app.App(),
 		scene: core.NewNode(),
 		cam:   camera.New(1),
-		help:  true,
+		help:  false,
 	}
 }
 

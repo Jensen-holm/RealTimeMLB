@@ -2,6 +2,7 @@ package win
 
 import (
 	"fmt"
+	"github.com/Jensen-holm/RealTimeMLB/bsbl"
 	"github.com/Jensen-holm/RealTimeMLB/obj"
 	"github.com/g3n/engine/camera"
 	"github.com/g3n/engine/gui"
@@ -45,6 +46,8 @@ func (w *Window) Init() {
 	if err != nil {
 		log.Fatalf("error loading obj files: %v", err)
 	}
+
+	bsbl.Init(w.scene)
 
 }
 
