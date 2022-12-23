@@ -14,18 +14,12 @@ func LoadAll() ([]*core.Node, error) {
 		return nil, err
 	}
 
-	g1, err := Bat()
-	if err != nil {
-		return nil, err
-	}
-
 	g2, err := Soccer()
 	if err != nil {
 		return nil, err
 	}
 
 	groups = append(groups, g)
-	groups = append(groups, g1)
 	groups = append(groups, g2)
 	return groups, nil
 }
@@ -54,15 +48,6 @@ func ReadObj(objPath, mtlPath string) (*core.Node, error) {
 
 func Ball() (*core.Node, error) {
 	g, err := ReadObj("baseball.obj", "baseball.mtl")
-	if err != nil {
-		return nil, err
-	}
-
-	return g, nil
-}
-
-func Bat() (*core.Node, error) {
-	g, err := ReadObj("basebbat.obj", "basebbat.mtl")
 	if err != nil {
 		return nil, err
 	}

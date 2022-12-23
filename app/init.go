@@ -38,7 +38,7 @@ func (w *Window) Init() {
 	}
 
 	// add stuff
-	Ground(w)
+	//Ground(w)
 	AddLight(w)
 
 	err := AddObjs(w)

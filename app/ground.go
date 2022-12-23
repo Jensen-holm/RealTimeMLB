@@ -24,6 +24,8 @@ func Ground(w *Window) {
 
 	g := graphic.NewMesh(p, gMat)
 
+	g.SetPosition(0, -1, 0)
+
 	// makes it flat
 	g.RotateX(Deg2Rad(90))
 	w.Add2Scene(g)
