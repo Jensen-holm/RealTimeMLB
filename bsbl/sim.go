@@ -8,9 +8,7 @@ import (
 )
 
 var (
-	gConst = &math32.Vector3{
-		Y: -0.98,
-	}
+	gConst  = &math32.Vector3{Y: -0.98}
 	gravity = physics.NewConstantForceField(gConst)
 )
 

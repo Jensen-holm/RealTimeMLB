@@ -19,19 +19,6 @@ func (w *Window) Init() {
 	w.scene.Add(w.cam)
 	camera.NewOrbitControl(w.cam)
 
-	// might want to add this later
-	// Set up callback to update viewport and camera aspect ratio when the window is resized
-	// want to make this its own function
-	//onResize := func(evName string, ev interface{}) {
-	//	// Get framebuffer size and update viewport accordingly
-	//	width, height := w.app.GetSize()
-	//	w.app.Gls().Viewport(0, 0, int32(width), int32(height))
-	//	// Update the camera's aspect ratio
-	//	w.cam.SetAspect(float32(width) / float32(height))
-	//}
-	//w.app.Subscribe(window.OnWindowSize, onResize)
-	//onResize("", nil)
-
 	w.app.Gls().ClearColor(0.5, 0.5, 0.5, 1.0)
 
 	if w.help {
@@ -39,8 +26,13 @@ func (w *Window) Init() {
 	}
 
 	// add stuff
-	//Ground(w)
-	AddLight(w)
+	Ground(w)
+	AddLight(
+		w,
+		100,
+		100,
+		100,
+	)
 
 	err := AddObjs(w)
 	if err != nil {
@@ -53,7 +45,11 @@ func (w *Window) Init() {
 
 func AddObjs(w *Window) error {
 
-	gs, err := obj.LoadAll()
+	gs, err := obj.LoadAll(
+		obj.Ball(),
+		obj.Soccer(),
+	)
+
 	if err != nil {
 		return fmt.Errorf("error loading test object")
 	}

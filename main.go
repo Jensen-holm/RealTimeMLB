@@ -2,7 +2,6 @@ package main
 
 import (
 	win "github.com/Jensen-holm/RealTimeMLB/app"
-	"log"
 )
 
 func main() {
@@ -13,7 +12,7 @@ func main() {
 
 	err := w.RunApp()
 	if err != nil {
-		log.Fatalf("error running the app: %v", err)
+		panic(err)
 	}
 
 }
