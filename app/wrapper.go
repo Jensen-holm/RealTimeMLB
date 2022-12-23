@@ -1,0 +1,62 @@
+package app
+
+import (
+	"github.com/g3n/engine/app"
+	"github.com/g3n/engine/camera"
+	"github.com/g3n/engine/core"
+	"github.com/g3n/engine/gls"
+	"github.com/g3n/engine/gui"
+	"github.com/g3n/engine/renderer"
+	"github.com/g3n/engine/util/helper"
+	"github.com/g3n/engine/window"
+	"time"
+)
+
+type Window struct {
+	app   *app.Application
+	scene *core.Node
+	cam   *camera.Camera
+}
+
+func NewWindow() *Window {
+	return &Window{
+		app:   app.App(),
+		scene: core.NewNode(),
+		cam:   camera.New(1),
+	}
+}
+
+// SetUP -> Necessary boilerplate to create
+// a g3n application before running it
+func (w *Window) SetUP() {
+
+	gui.Manager().Set(w.scene)
+	w.cam.SetPosition(0, 0, 2)
+	w.scene.Add(w.cam)
+	camera.NewOrbitControl(w.cam)
+
+	// Set up callback to update viewport and camera aspect ratio when the window is resized
+	onResize := func(evName string, ev interface{}) {
+		// Get framebuffer size and update viewport accordingly
+		width, height := w.app.GetSize()
+		w.app.Gls().Viewport(0, 0, int32(width), int32(height))
+		// Update the camera's aspect ratio
+		w.cam.SetAspect(float32(width) / float32(height))
+	}
+	w.app.Subscribe(window.OnWindowSize, onResize)
+	onResize("", nil)
+
+	w.scene.Add(helper.NewAxes(0.5))
+	w.app.Gls().ClearColor(0.5, 0.5, 0.5, 1.0)
+}
+
+func (w *Window) RunApp() error {
+	var err error = nil
+
+	w.app.Run(func(renderer *renderer.Renderer, deltaTime time.Duration) {
+		w.app.Gls().Clear(gls.DEPTH_BUFFER_BIT | gls.STENCIL_BUFFER_BIT | gls.COLOR_BUFFER_BIT)
+		err = renderer.Render(w.scene, w.cam)
+	})
+
+	return err
+}
