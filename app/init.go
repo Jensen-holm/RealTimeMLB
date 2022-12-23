@@ -26,7 +26,7 @@ func (w *Window) Init() {
 	//}
 	//w.app.Subscribe(window.OnWindowSize, onResize)
 	//onResize("", nil)
-	//
+
 	w.app.Gls().ClearColor(0.5, 0.5, 0.5, 1.0)
 
 	if w.help {

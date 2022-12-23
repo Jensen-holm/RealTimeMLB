@@ -9,8 +9,6 @@ func main() {
 
 	w := win.NewWindow()
 
-	//w.ToggleHelp(false)
-
 	// Must be called right before RunApp
 	w.Init()
 
