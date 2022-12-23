@@ -9,14 +9,14 @@ import (
 
 func Ground(w *Window) {
 
-	p := geometry.NewPlane(.5, 1)
+	p := geometry.NewPlane(100, 100)
 	gMat := material.NewStandard(&math32.Color{
-		R: 1,
-		G: 1,
-		B: 1,
+		R: 100,
+		G: 100,
+		B: 100,
 	})
 	gMat.SetWireframe(false)
-	gMat.SetSide(material.SideBack)
+	gMat.SetSide(material.SideDouble)
 
 	g := graphic.NewMesh(p, gMat)
 
