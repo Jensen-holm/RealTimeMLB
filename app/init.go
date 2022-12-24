@@ -21,9 +21,9 @@ func (w *Window) Init() {
 	w.AddBg()
 	//w.AddGround()
 	b := ball.NewBall()
-	w.Add2Scene(b.Mesh())
+	w.Add2Scene(b.Mesh)
 
-	gui.Manager().Set(w.scene)
+	gui.Manager().Set(w.Scene)
 	w.AddLight(100, 100, 100, "white")
 	w.AddLight(-100, 100, -100, "white")
 
@@ -32,25 +32,25 @@ func (w *Window) Init() {
 		log.Fatalf("error loading obj files: %v", err)
 	}
 
-	sim := bsbl.NewSim(w.scene)
+	sim := bsbl.NewSim(w.Scene)
 	sim.InitGravity(b)
 
 }
 
 func (w *Window) AddHelp() {
-	if w.help {
+	if w.Help {
 		w.Add2Scene(helper.NewAxes(10))
 	}
 }
 
 func (w *Window) AddBg() {
-	w.app.Gls().ClearColor(.5, .75, 2, .5)
+	w.App.Gls().ClearColor(.5, .75, 2, .5)
 }
 
 func (w *Window) AddCam() {
-	w.cam.SetPosition(0, 0, 2)
-	w.scene.Add(w.cam)
-	camera.NewOrbitControl(w.cam)
+	w.Cam.SetPosition(0, 0, 2)
+	w.Scene.Add(w.Cam)
+	camera.NewOrbitControl(w.Cam)
 }
 
 func (w *Window) AddObjs() error {

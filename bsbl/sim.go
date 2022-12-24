@@ -15,19 +15,19 @@ var (
 )
 
 type Sim struct {
-	self *physics.Simulation
+	Self *physics.Simulation
 }
 
 func NewSim(scene *core.Node) *Sim {
 	sim := new(Sim)
-	sim.self = physics.NewSimulation(scene)
-	sim.self.AddForceField(gravity)
+	sim.Self = physics.NewSimulation(scene)
+	sim.Self.AddForceField(gravity)
 	return sim
 }
 
 func (s *Sim) InitGravity(b *ball.Ball) {
-	nb := object.NewBody(b.Mesh())
-	s.self.AddBody(nb, "Baseball")
+	nb := object.NewBody(b.Mesh)
+	s.Self.AddBody(nb, "Baseball")
 
 	nb.SetPosition(0, float32(b.R), 0)
 	nb.SetVelocity(math32.NewVector3(-.5, 0, 0))

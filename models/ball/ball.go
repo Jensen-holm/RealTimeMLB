@@ -20,9 +20,9 @@ func Cm2Ft(cm float32) float64 {
 
 type Ball struct {
 	R    float64
-	geom *geometry.Geometry
-	mat  *material.Standard
-	mesh *graphic.Mesh
+	Geom *geometry.Geometry
+	Mat  *material.Standard
+	Mesh *graphic.Mesh
 }
 
 // NewBall -> after this is run, the sphere returned
@@ -40,20 +40,8 @@ func NewBall() *Ball {
 	sphereMesh := graphic.NewMesh(s, mat)
 	return &Ball{
 		R:    ballRad,
-		geom: s,
-		mat:  mat,
-		mesh: sphereMesh,
+		Geom: s,
+		Mat:  mat,
+		Mesh: sphereMesh,
 	}
-}
-
-func (b *Ball) Mesh() *graphic.Mesh {
-	return b.mesh
-}
-
-func (b *Ball) Geom() *geometry.Geometry {
-	return b.geom
-}
-
-func (b *Ball) Mat() *material.Standard {
-	return b.mat
 }
