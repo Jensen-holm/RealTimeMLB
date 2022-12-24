@@ -5,7 +5,6 @@ import (
 	"github.com/Jensen-holm/RealTimeMLB/bsbl"
 	"github.com/Jensen-holm/RealTimeMLB/models"
 	"github.com/Jensen-holm/RealTimeMLB/models/ball"
-	"github.com/Jensen-holm/RealTimeMLB/models/stadium"
 	"github.com/g3n/engine/camera"
 	"github.com/g3n/engine/gui"
 	"github.com/g3n/engine/util/helper"
@@ -20,17 +19,17 @@ func (w *Window) Init() {
 	w.AddCam()
 	w.AddHelp()
 	w.AddBg()
-	w.AddGround()
+	//w.AddGround()
 	w.AddLight(100, 100, 100, "white")
 	w.AddLight(-100, 100, -100, "white")
 	w.AddShaders()
 
 	// add the baseball
 	b := ball.NewBall()
-	w.Add2Scene(b)
+	w.Add2Scene(b.Mesh())
 
 	// init the physics simulation
-	bsbl.Init(w.scene)
+	bsbl.NewSim(w.scene)
 
 	gui.Manager().Set(w.scene)
 
@@ -60,7 +59,8 @@ func (w *Window) AddCam() {
 func (w *Window) AddObjs() error {
 
 	gs, err := models.LoadAll(
-		stadium.Soccer(),
+	// Going without the stadium for testing physics
+	//stadium.Soccer(),
 	)
 
 	if err != nil {

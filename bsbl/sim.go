@@ -1,6 +1,7 @@
 package bsbl
 
 import (
+	"github.com/Jensen-holm/RealTimeMLB/models/ball"
 	"github.com/g3n/engine/core"
 	"github.com/g3n/engine/experimental/physics"
 	"github.com/g3n/engine/graphic"
@@ -16,10 +17,14 @@ type Sim struct {
 	self *physics.Simulation
 }
 
-func Init(scene *core.Node) {
+func NewSim(scene *core.Node) *Sim {
 	sim := new(Sim)
 	sim.self = physics.NewSimulation(scene)
 	sim.self.AddForceField(gravity)
+	return sim
+}
+
+func InitGravity(b *ball.Ball) {
 }
 
 func (s *Sim) Pitch(

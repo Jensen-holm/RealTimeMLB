@@ -6,7 +6,9 @@ import (
 	"os"
 )
 
-func LoadAll(gs ...*core.Node) ([]*core.Node, error) {
+func LoadAll(
+	gs ...*core.Node,
+) ([]*core.Node, error) {
 	groups := make([]*core.Node, 0)
 	for _, g := range gs {
 		groups = append(groups, g)
@@ -19,7 +21,10 @@ func DPath() string {
 	return d + "/models/"
 }
 
-func ReadObj(objPath, mtlPath string) (*core.Node, error) {
+func ReadObj(
+	objPath,
+	mtlPath string,
+) (*core.Node, error) {
 
 	dec, err := obj.Decode(
 		DPath()+objPath,
