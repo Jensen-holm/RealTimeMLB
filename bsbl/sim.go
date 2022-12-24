@@ -4,6 +4,7 @@ import (
 	"github.com/Jensen-holm/RealTimeMLB/models/ball"
 	"github.com/g3n/engine/core"
 	"github.com/g3n/engine/experimental/physics"
+	"github.com/g3n/engine/experimental/physics/object"
 	"github.com/g3n/engine/graphic"
 	"github.com/g3n/engine/math32"
 )
@@ -24,7 +25,13 @@ func NewSim(scene *core.Node) *Sim {
 	return sim
 }
 
-func InitGravity(b *ball.Ball) {
+func (s *Sim) InitGravity(b *ball.Ball) {
+	nb := object.NewBody(b.Mesh())
+	s.self.AddBody(nb, "Baseball")
+
+	nb.SetPosition(0, float32(b.R), 0)
+	nb.SetVelocity(math32.NewVector3(-.5, 0, 0))
+	nb.SetAngularVelocity(math32.NewVector3(0, 0, 1))
 }
 
 func (s *Sim) Pitch(

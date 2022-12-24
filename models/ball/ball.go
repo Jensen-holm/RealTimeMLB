@@ -19,6 +19,7 @@ func Cm2Ft(cm float32) float64 {
 // the position of the ball after each play
 
 type Ball struct {
+	R    float64
 	geom *geometry.Geometry
 	mat  *material.Standard
 	mesh *graphic.Mesh
@@ -27,13 +28,18 @@ type Ball struct {
 // NewBall -> after this is run, the sphere returned
 // must be added to the windows scene object
 func NewBall() *Ball {
-	s := geometry.NewSphere(ballRad, 100, 100)
+	s := geometry.NewSphere(
+		ballRad,
+		100,
+		100,
+	)
 
 	mat := material.NewStandard(
 		math32.NewColor("slategray"),
 	)
 	sphereMesh := graphic.NewMesh(s, mat)
 	return &Ball{
+		R:    ballRad,
 		geom: s,
 		mat:  mat,
 		mesh: sphereMesh,

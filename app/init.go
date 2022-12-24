@@ -20,23 +20,20 @@ func (w *Window) Init() {
 	w.AddHelp()
 	w.AddBg()
 	//w.AddGround()
-	w.AddLight(100, 100, 100, "white")
-	w.AddLight(-100, 100, -100, "white")
-	w.AddShaders()
-
-	// add the baseball
 	b := ball.NewBall()
 	w.Add2Scene(b.Mesh())
 
-	// init the physics simulation
-	bsbl.NewSim(w.scene)
-
 	gui.Manager().Set(w.scene)
+	w.AddLight(100, 100, 100, "white")
+	w.AddLight(-100, 100, -100, "white")
 
 	err := w.AddObjs()
 	if err != nil {
 		log.Fatalf("error loading obj files: %v", err)
 	}
+
+	sim := bsbl.NewSim(w.scene)
+	sim.InitGravity(b)
 
 }
 
