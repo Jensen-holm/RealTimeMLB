@@ -7,7 +7,7 @@ import (
 )
 
 // Window -> This struct and files associated
-// with it serve as a wrapper for g3n app stuff
+// with it serve as a wrapper for g3n win stuff
 type Window struct {
 	App   *app.Application
 	Scene *core.Node

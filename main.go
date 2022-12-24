@@ -1,7 +1,7 @@
 package main
 
 import (
-	win "github.com/Jensen-holm/RealTimeMLB/app"
+	"github.com/Jensen-holm/RealTimeMLB/win"
 )
 
 func main() {
