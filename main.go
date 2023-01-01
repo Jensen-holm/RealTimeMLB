@@ -1,6 +1,10 @@
 package main
 
-import "github.com/Jensen-holm/RealTimeMLB/apper"
+import (
+	"github.com/Jensen-holm/RealTimeMLB/apper"
+	"github.com/Jensen-holm/g3n-App-Skeleton/apper/model"
+	"github.com/Jensen-holm/g3n-App-Skeleton/apper/phys"
+)
 
 func main() {
 
@@ -11,5 +15,31 @@ func main() {
 }
 
 func Init(a *apper.App) {
+    a.AddBg(.5, .75, 2, .5)
 
+	sim := phys.NewSim()
+	a.AddSim(sim)
+	sim.SetGravity(0, -32.2, 0)
+
+	ball := model.NewSphere(0, 50, 0, 3, 14.5, "red")
+	ball2 := model.NewSphere(0, 500, 0, 10, 20.0, "green")
+
+	sim.AddSphere(ball, ball2)
+	ball.ApplyForce(10, 150, 10)
+
+	ground := model.NewPlane(10000, 10000, 90, "slategray", false)
+	sim.SetPlane(ground)
+
+	l1 := apper.Light("white", 1, 100, 100, 100)
+	l2 := apper.Light("white", 1, -100, 100, -100)
+	l3 := apper.Light("white", 1, -100, -100, -100)
+	l4 := apper.Light("white", 1, 100, -100, 100)
+
+	a.Add2Scene(
+		a.Cam.Self,
+		l1, l2, l3, l4,
+		ground.Mesh,
+		ball.Mesh,
+		ball2.Mesh,
+	)
 }
