@@ -7,15 +7,13 @@ import (
 )
 
 func main() {
-
-	a := apper.NewApp(true)
+	a := apper.NewApp(false)
 	Init(a)
 	a.Run()
-
 }
 
 func Init(a *apper.App) {
-    a.AddBg(.5, .75, 2, .5)
+	a.AddBg(.5, .75, 2, .5)
 
 	sim := phys.NewSim()
 	a.AddSim(sim)
