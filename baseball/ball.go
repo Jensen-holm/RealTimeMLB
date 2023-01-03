@@ -1,8 +1,7 @@
 package baseball
 
 import (
-	phys2 "github.com/Jensen-holm/RealTimeMLB/apper/phys"
-	"github.com/Jensen-holm/g3n-App-Skeleton/apper/model"
+	"github.com/Jensen-holm/g3n-Wrapper/apper/model"
 )
 
 // NewBaseball -> Creates a standard baseball with its
@@ -14,8 +13,8 @@ func NewBaseball() *model.Sphere {
 		0,
 		1,
 		0,
-		phys2.Cm2Ft(3.65),
+		3,
 		148,
-		"white",
+		"red",
 	)
 }

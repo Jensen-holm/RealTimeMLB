@@ -1,7 +1,7 @@
 package stadium
 
 import (
-	"github.com/Jensen-holm/g3n-App-Skeleton/apper/model"
+	"github.com/Jensen-holm/g3n-Wrapper/apper/model"
 	"github.com/g3n/engine/core"
 	"os"
 )

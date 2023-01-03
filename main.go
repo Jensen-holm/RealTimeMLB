@@ -1,11 +1,13 @@
 package main
 
 import (
-	"github.com/Jensen-holm/RealTimeMLB/apper"
 	"github.com/Jensen-holm/RealTimeMLB/baseball"
 	stadium "github.com/Jensen-holm/RealTimeMLB/models/SoccerStadium"
-	"github.com/Jensen-holm/g3n-App-Skeleton/apper/model"
-	"github.com/Jensen-holm/g3n-App-Skeleton/apper/phys"
+
+	"github.com/Jensen-holm/g3n-Wrapper/apper"
+	"github.com/Jensen-holm/g3n-Wrapper/apper/model"
+	"github.com/Jensen-holm/g3n-Wrapper/apper/phys"
+
 	"log"
 )
 
@@ -50,7 +52,6 @@ func Init(a *apper.App) {
 	a.Add2Scene(
 		a.Cam.Self,
 		l1, l2, l3, l4,
-		ground.Mesh,
 		ball.Mesh,
 		arena,
 	)

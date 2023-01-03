@@ -1,5 +1,5 @@
-github.com/Jensen-holm/g3n-App-Skeleton v0.0.0-20221228233410-543538c48063 h1:sw6/k97geUaBTJPWISv6UzDNh5Cywp60+7oKiqcp8WY=
-github.com/Jensen-holm/g3n-App-Skeleton v0.0.0-20221228233410-543538c48063/go.mod h1:anyglGN5RrtV7Yujjwc0kS7ST/eyLc7De4pZW7MeXDE=
+github.com/Jensen-holm/g3n-Wrapper v0.0.0-20230103232449-28972337cc1b h1:8Pjv6o6oqKaBun7v2Az24XMTkrXRmr/hqoYKkB+sanI=
+github.com/Jensen-holm/g3n-Wrapper v0.0.0-20230103232449-28972337cc1b/go.mod h1:/QUS0+aEXFjLP6aRdqmbOCSaGifltI8QOgfE1HsgUvo=
 github.com/g3n/engine v0.2.0 h1:7dmj4c+3xHcBnYrVmRuVf/oZ2JycxJU9Y+2FQj1Af2Y=
 github.com/g3n/engine v0.2.0/go.mod h1:rnj8jiLdKEDI8VbveKhmdL4rovjjy+uxNP5YROg2x8g=
 github.com/go-gl/glfw/v3.3/glfw v0.0.0-20210410170116-ea3d685f79fb h1:T6gaWBvRzJjuOrdCtg8fXXjKai2xSDqWTcKFUPuw8Tw=
