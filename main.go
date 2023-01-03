@@ -22,8 +22,13 @@ func Init(a *apper.App) {
 	ball := model.NewSphere(0, 50, 0, 3, 14.5, "red")
 	ball2 := model.NewSphere(0, 500, 0, 10, 20.0, "green")
 
+	//arena, err := stadium.ImportStadium()
+	//if err != nil {
+	//	log.Fatalf("error importing the stadium: %v", err)
+	//}
+
 	sim.AddSphere(ball, ball2)
-	ball.ApplyForce(10, 150, 10)
+	ball.ApplyForce(150, 150, 150)
 
 	ground := model.NewPlane(10000, 10000, 90, "slategray", false)
 	sim.SetPlane(ground)
@@ -39,5 +44,6 @@ func Init(a *apper.App) {
 		ground.Mesh,
 		ball.Mesh,
 		ball2.Mesh,
+		//arena,
 	)
 }
