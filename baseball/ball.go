@@ -2,6 +2,7 @@ package baseball
 
 import (
 	"github.com/Jensen-holm/g3n-Wrapper/apper/model"
+	"github.com/Jensen-holm/g3n-Wrapper/apper/phys"
 )
 
 // NewBaseball -> Creates a standard baseball with its
@@ -13,8 +14,8 @@ func NewBaseball() *model.Sphere {
 		0,
 		1,
 		0,
-		3,
+		phys.Cm2Ft(3.65),
 		148,
-		"red",
+		"white",
 	)
 }

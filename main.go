@@ -1,9 +1,12 @@
 package main
 
 import (
+
+	// Packages made specific to this project
 	"github.com/Jensen-holm/RealTimeMLB/baseball"
 	stadium "github.com/Jensen-holm/RealTimeMLB/models/SoccerStadium"
 
+	// Wrapper packages for g3n that I made
 	"github.com/Jensen-holm/g3n-Wrapper/apper"
 	"github.com/Jensen-holm/g3n-Wrapper/apper/model"
 	"github.com/Jensen-holm/g3n-Wrapper/apper/phys"
@@ -31,7 +34,7 @@ func Init(a *apper.App) {
 	ball := baseball.NewBaseball()
 
 	sim.AddSphere(ball)
-	ball.ApplyForce(150, -150, 150)
+	ball.ApplyForce(150, 150, 150)
 
 	ground := model.NewPlane(10000, 10000, 90, "slategray", false)
 	sim.SetPlane(ground)
