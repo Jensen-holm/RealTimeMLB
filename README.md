@@ -1,6 +1,9 @@
 # RealTimeMLB
-Real Time MLB game virtual reality visualization built on the g3n 3D Engine (https://github.com/g3n/engine)<br>
-and a wrapper package that I built for it and am still developing (https://github.com/Jensen-holm/g3n-Wrapper/tree/main/apper)<br>
+Real Time MLB game virtual reality visualization built on the g3n 3D Engine<br>
+and a wrapper package that I built for it and am still developing 
+
+g3n -> `https://github.com/g3n/engine`<br>
+Wrapper -> `https://github.com/Jensen-holm/g3n-Wrapper/tree/main/apper`<br>
 
 ## Goal
 
