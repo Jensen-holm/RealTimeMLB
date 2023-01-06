@@ -2,6 +2,10 @@ github.com/Jensen-holm/g3n-Wrapper v0.0.0-20230103232449-28972337cc1b h1:8Pjv6o6
 github.com/Jensen-holm/g3n-Wrapper v0.0.0-20230103232449-28972337cc1b/go.mod h1:/QUS0+aEXFjLP6aRdqmbOCSaGifltI8QOgfE1HsgUvo=
 github.com/Jensen-holm/g3n-Wrapper v0.0.0-20230103234618-e927eb29c790 h1:YImMbeUhvQffTtY8IkPbL1aIFvpFBRbH3xsw3UweVgY=
 github.com/Jensen-holm/g3n-Wrapper v0.0.0-20230103234618-e927eb29c790/go.mod h1:/QUS0+aEXFjLP6aRdqmbOCSaGifltI8QOgfE1HsgUvo=
+github.com/Jensen-holm/g3n-Wrapper v0.0.0-20230105214826-0564f2b02a07 h1:eTFfZZ28rmt1O1BinmWv3y/1u+hhF4Qb52AySNqJIE0=
+github.com/Jensen-holm/g3n-Wrapper v0.0.0-20230105214826-0564f2b02a07/go.mod h1:SsSMJviRWlIdmpjE8Dq6q5u/izXgitC/w3WtrwZeMTk=
+github.com/Jensen-holm/g3n-Wrapper v0.0.0-20230106004223-78fcac7a44c1 h1:wbTK2TFe581mmxYwlU+UqBIlVFyUHHq7Flu3wubBTi8=
+github.com/Jensen-holm/g3n-Wrapper v0.0.0-20230106004223-78fcac7a44c1/go.mod h1:SsSMJviRWlIdmpjE8Dq6q5u/izXgitC/w3WtrwZeMTk=
 github.com/g3n/engine v0.2.0 h1:7dmj4c+3xHcBnYrVmRuVf/oZ2JycxJU9Y+2FQj1Af2Y=
 github.com/g3n/engine v0.2.0/go.mod h1:rnj8jiLdKEDI8VbveKhmdL4rovjjy+uxNP5YROg2x8g=
 github.com/go-gl/glfw/v3.3/glfw v0.0.0-20210410170116-ea3d685f79fb h1:T6gaWBvRzJjuOrdCtg8fXXjKai2xSDqWTcKFUPuw8Tw=
@@ -17,6 +21,8 @@ golang.org/x/image v0.0.0-20210607152325-775e3b0c77b9 h1:D0iM1dTCbD5Dg1CbuvLC/v/
 golang.org/x/image v0.0.0-20210607152325-775e3b0c77b9/go.mod h1:023OzeP/+EPmXeapQh35lcL3II3LrY8Ic+EFFKVhULM=
 golang.org/x/image v0.2.0 h1:/DcQ0w3VHKCC5p0/P2B0JpAZ9Z++V2KOo2fyU89CXBQ=
 golang.org/x/image v0.2.0/go.mod h1:la7oBXb9w3YFjBqaAwtynVioc1ZvOnNteUNrifGNmAI=
+golang.org/x/image v0.3.0 h1:HTDXbdK9bjfSWkPzDJIw89W8CAtfFGduujWs33NLLsg=
+golang.org/x/image v0.3.0/go.mod h1:fXd9211C/0VTlYuAcOhW8dY/RtEJqODXOWBDpmYBf+A=
 golang.org/x/mod v0.6.0-dev.0.20220419223038-86c51ed26bb4/go.mod h1:jJ57K6gSWd91VN4djpZkiMVwK6gcyfeH4XE8wZrZaV4=
 golang.org/x/net v0.0.0-20190620200207-3b0461eec859/go.mod h1:z5CRVTTTmAJ677TzLLGU+0bjPO0LkuOLi4/5GtJWs/s=
 golang.org/x/net v0.0.0-20210226172049-e18ecbb05110/go.mod h1:m0MpNAwzfU5UDzcl9v0D8zg8gWTRqZa9RBIspLL5mdg=
@@ -35,6 +41,7 @@ golang.org/x/text v0.3.3/go.mod h1:5Zoc/QRtKVWzQhOtBMvqHzDpF6irO9z98xDceosuGiQ=
 golang.org/x/text v0.3.6/go.mod h1:5Zoc/QRtKVWzQhOtBMvqHzDpF6irO9z98xDceosuGiQ=
 golang.org/x/text v0.3.7/go.mod h1:u+2+/6zg+i71rQMx5EYifcz6MCKuco9NR6JIITiCfzQ=
 golang.org/x/text v0.5.0/go.mod h1:mrYo+phRRbMaCq/xk9113O4dZlRixOauAjOtrjsXDZ8=
+golang.org/x/text v0.6.0/go.mod h1:mrYo+phRRbMaCq/xk9113O4dZlRixOauAjOtrjsXDZ8=
 golang.org/x/tools v0.0.0-20180917221912-90fa682c2a6e/go.mod h1:n7NCudcB/nEzxVGmLbDWY5pfWTLqBcC2KZ6jyYvM4mQ=
 golang.org/x/tools v0.0.0-20191119224855-298f0cb1881e/go.mod h1:b+2E5dAYhXwXZwtnZ6UAqBI28+e2cm9otk0dWdXHAEo=
 golang.org/x/tools v0.1.12/go.mod h1:hNGJHUnrk76NpqgfD5Aqm5Crs+Hm0VOH/i9J2+nxYbc=

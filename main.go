@@ -23,6 +23,7 @@ func main() {
 // Init -> Customizing the application wrapper (apper)
 // for our specific use case. Ran once before running the app.
 func Init(a *apper.App) {
+
 	a.AddBg(.5, .75, 2, .5)
 
 	// Creating physics simulation
@@ -34,7 +35,7 @@ func Init(a *apper.App) {
 	ball := baseball.NewBaseball()
 
 	sim.AddSphere(ball)
-	ball.ApplyForce(150, 150, 150)
+	ball.ApplyForce(10, 10, 10)
 
 	ground := model.NewPlane(10000, 10000, 90, "slategray", false)
 	sim.SetPlane(ground)
@@ -47,7 +48,7 @@ func Init(a *apper.App) {
 
 	// Importing models built with other tools (blender)
 	arena, err := stadium.ImportStadium()
-	if err != nil || arena == nil {
+	if err != nil {
 		log.Fatalf("error importing the stadium: %v", err)
 	}
 

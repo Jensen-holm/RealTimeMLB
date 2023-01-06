@@ -14,8 +14,14 @@ func NewBaseball() *model.Sphere {
 		0,
 		1,
 		0,
-		phys.Cm2Ft(3.65),
-		148,
+
+		// for visibility, the ball is 2x
+		// the size of a normal baseball
+		phys.Cm2Ft(3.65*2),
+
+		// 148 g was too much, dividing it by
+		// 10 gives more realistic results
+		148/10,
 		"white",
 	)
 }
