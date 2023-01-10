@@ -40,8 +40,8 @@ func Init(a *apper.App) {
 	// in real time while a certain mlb game is going on
 	sim.AddSphere(ball)
 	ball.ApplyForce(
-		baseball.CalculateVector(45, 100, 45),
-	)
+        baseball.CalculateVector(20, 150, 15),
+    )
 
 	// making the plane, added it to the simulation but not to the
 	// scene so that it is invisible for testing our stadium model
