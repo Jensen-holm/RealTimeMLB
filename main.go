@@ -34,17 +34,11 @@ func Init(a *apper.App) {
 	// Creating objects to render
 	ball := baseball.NewBaseball()
 
-	// eventually this will be outside the init function
-	// and inside our own custom update function that is run each frame
-	// and forces and balls will be added based on scraped baseball data
-	// in real time while a certain mlb game is going on
 	sim.AddSphere(ball)
 	ball.ApplyForce(
         baseball.CalculateVector(20, 150, 15),
     )
 
-	// making the plane, added it to the simulation but not to the
-	// scene so that it is invisible for testing our stadium model
 	ground := model.NewPlane(10000, 10000, 90, "slategray", false)
 	sim.SetPlane(ground)
 
@@ -55,7 +49,6 @@ func Init(a *apper.App) {
 	l4 := apper.Light("white", 1, 100, -100, 100)
 
 	// Importing models built with other tools (blender)
-	// The stadium package is one that is not a part of the wrapper
 	arena, err := stadium.ImportStadium()
 	if err != nil {
 		log.Fatalf("error importing the stadium: %v", err)

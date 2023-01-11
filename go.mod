@@ -3,7 +3,7 @@ module github.com/Jensen-holm/RealTimeMLB
 go 1.19
 
 require (
-	github.com/Jensen-holm/g3n-Wrapper v0.0.0-20230107022752-46fcd988b392
+	github.com/Jensen-holm/g3n-Wrapper v0.0.0-20230106004223-78fcac7a44c1
 	github.com/g3n/engine v0.2.0
 )
 

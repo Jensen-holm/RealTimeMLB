@@ -6,8 +6,6 @@ github.com/Jensen-holm/g3n-Wrapper v0.0.0-20230105214826-0564f2b02a07 h1:eTFfZZ2
 github.com/Jensen-holm/g3n-Wrapper v0.0.0-20230105214826-0564f2b02a07/go.mod h1:SsSMJviRWlIdmpjE8Dq6q5u/izXgitC/w3WtrwZeMTk=
 github.com/Jensen-holm/g3n-Wrapper v0.0.0-20230106004223-78fcac7a44c1 h1:wbTK2TFe581mmxYwlU+UqBIlVFyUHHq7Flu3wubBTi8=
 github.com/Jensen-holm/g3n-Wrapper v0.0.0-20230106004223-78fcac7a44c1/go.mod h1:SsSMJviRWlIdmpjE8Dq6q5u/izXgitC/w3WtrwZeMTk=
-github.com/Jensen-holm/g3n-Wrapper v0.0.0-20230107022752-46fcd988b392 h1:w6f4BLP4kud0anV3a+aT9+j+hxyaJt6KpNaG8ZmKa3c=
-github.com/Jensen-holm/g3n-Wrapper v0.0.0-20230107022752-46fcd988b392/go.mod h1:SsSMJviRWlIdmpjE8Dq6q5u/izXgitC/w3WtrwZeMTk=
 github.com/g3n/engine v0.2.0 h1:7dmj4c+3xHcBnYrVmRuVf/oZ2JycxJU9Y+2FQj1Af2Y=
 github.com/g3n/engine v0.2.0/go.mod h1:rnj8jiLdKEDI8VbveKhmdL4rovjjy+uxNP5YROg2x8g=
 github.com/go-gl/glfw/v3.3/glfw v0.0.0-20210410170116-ea3d685f79fb h1:T6gaWBvRzJjuOrdCtg8fXXjKai2xSDqWTcKFUPuw8Tw=
