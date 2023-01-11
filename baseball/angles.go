@@ -1,4 +1,3 @@
-
 package baseball
 
 import (
@@ -10,11 +9,15 @@ import (
 // to test anything while there are no games going on in the mlb right now.
 
 // CalculateVector -> Chat gpt gave me this function, excited to see if it will work
-func CalculateVector(launchAngle, exitVelocity, sprayAngle float64) (float32, float32, float32) {
-	launchAngleRadians := launchAngle * (math.Pi / 180)
-	sprayAngleRadians := sprayAngle * (math.Pi / 180)
-	x := exitVelocity * math.Cos(launchAngleRadians)
-	y := exitVelocity * math.Sin(launchAngleRadians) * math.Cos(sprayAngleRadians)
-	z := exitVelocity * math.Sin(launchAngleRadians) * math.Sin(sprayAngleRadians)
-	return float32(x), float32(y), float32(z)
+func CalculateVector(la, ev, spray float64) (float32, float32, float32) {
+
+	// convert from degrees to radians
+	laRad := la * (math.Pi / 180)
+	spRad := spray * (math.Pi / 180)
+
+	x := float32(ev * math.Cos(laRad))
+	y := float32(ev * math.Sin(laRad) * math.Cos(spRad))
+	z := float32(ev * math.Sin(laRad) * math.Sin(spRad))
+
+	return x, y, z
 }

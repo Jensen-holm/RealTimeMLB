@@ -36,8 +36,8 @@ func Init(a *apper.App) {
 
 	sim.AddSphere(ball)
 	ball.ApplyForce(
-        baseball.CalculateVector(20, 150, 15),
-    )
+		baseball.CalculateVector(75, 300, 45),
+	)
 
 	ground := model.NewPlane(10000, 10000, 90, "slategray", false)
 	sim.SetPlane(ground)
