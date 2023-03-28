@@ -31,7 +31,6 @@ func Init(a *apper.App) {
 	a.AddSim(sim)
 	sim.SetGravity(0, -32.2, 0)
 
-	// Creating objects to render
 	ball := baseball.NewBaseball()
 
 	sim.AddSphere(ball)
